@@ -46,6 +46,6 @@ def get_pet_labels(image_dir):
     files = listdir(image_dir)
     for fileName in files:
         normalizedName = fileName.lower().strip()
-        value = normalizedName.split("_")[0:-1]
-        results_dic[fileName] = value
+        value = " ".join(normalizedName.split("_")[0:-1])
+        results_dic[fileName] = [value]
     return results_dic
