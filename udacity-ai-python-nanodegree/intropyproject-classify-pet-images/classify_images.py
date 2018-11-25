@@ -74,5 +74,5 @@ def classify_images(images_dir, results_dic, model):
         matching = 0
         if fileLabel in image_classification:
             matching = 1
-        results_dic[key].extend([classifier_result, matching])
+        results_dic[key].extend([image_classification, matching])
     return results_dic
