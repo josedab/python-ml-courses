@@ -67,7 +67,7 @@ def print_results(results_dic, results_stats_dic, model,
     print("- Number of dog images: {}".format(results_stats_dic['n_dogs_img']))
     print("- Number of 'Not-a' dog images: {}".format(results_stats_dic['n_notdogs_img']))
 
-    print("- % Correct Dogs: {}".format(results_stats_dic['n_notdogs_img']))
+    print("- % Correct Dogs: {}".format(results_stats_dic['pct_correct_dogs']))
     print("- % Correct Breed: {}".format(results_stats_dic['pct_correct_breed']))
     print("- % Correct 'Not-a' Dog: {}".format(results_stats_dic['pct_correct_notdogs']))
     print("- % Match: {}".format(results_stats_dic['pct_match']))
@@ -78,7 +78,7 @@ def print_results(results_dic, results_stats_dic, model,
 
             for key,value in results_dic.items():
                 if sum(value[3:]) == 1:
-                    print("- Pet image: {}, classifier label: {}".format(value[0], value[1]))
+                    print("- Pet image: {}, classifier label: {}".format(key, value[1]))
 
     if print_incorrect_breed:
         if results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']:
@@ -86,4 +86,4 @@ def print_results(results_dic, results_stats_dic, model,
 
             for key,value in results_dic.items():
                 if sum(value[3:]) == 2 and value[2] == 0:
-                    print("- Pet image: {}, classifier label: {}".format(value[0], value[1]))
+                    print("- Pet image: {}, classifier label: {}".format(key, value[1]))
