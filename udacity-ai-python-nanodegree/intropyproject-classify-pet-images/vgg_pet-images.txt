@@ -320,14 +320,14 @@ CNN model architecture: vgg
 - Number of images: 40
 - Number of dog images: 30
 - Number of 'Not-a' dog images: 10
-- % Correct Dogs: 10
+- % Correct Dogs: 100.0
 - % Correct Breed: 93.33333333333333
 - % Correct 'Not-a' Dog: 100.0
 - % Match: 87.5
 
 Misclassified Breed:
 
-- Pet image: beagle, classifier label: walker hound, walker foxhound
-- Pet image: great pyrenees, classifier label: kuvasz
+- Pet image: Beagle_01170.jpg, classifier label: walker hound, walker foxhound
+- Pet image: Great_pyrenees_05367.jpg, classifier label: kuvasz
 
 ** Total Elapsed Runtime: 0:0:15
